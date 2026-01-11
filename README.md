@@ -35,7 +35,7 @@ npm run dev
 ## Estructura del Proyecto
 
 ```
-prueba/
+gestor-tareas/
 ├── main.js          # Proceso principal de Electron
 ├── index.html       # Interfaz de usuario
 ├── styles.css       # Estilos de la aplicación
