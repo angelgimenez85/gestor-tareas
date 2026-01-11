@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Gestor de Tareas</h1>
+        </header>
+
+        <div class="task-form">
+            <div class="form-group">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Escribe una nueva tarea..." 
+                    autocomplete="off"
+                >
+                <select id="prioritySelect">
+                    <option value="">Sin prioridad</option>
+                    <option value="low">Baja</option>
+                    <option value="medium">Media</option>
+                    <option value="high">Alta</option>
+                </select>
+                <input 
+                    type="datetime-local" 
+                    id="dueDateInput" 
+                    class="due-date-input"
+                    title="Fecha de terminación (opcional)"
+                >
+                <button id="addTaskBtn" class="btn btn-primary">Agregar</button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <label for="filterSelect" class="filter-label">Filtrar por prioridad:</label>
+            <select id="filterSelect" class="filter-select">
+                <option value="all">Todas las tareas</option>
+                <option value="high">Alta prioridad</option>
+                <option value="medium">Media prioridad</option>
+                <option value="low">Baja prioridad</option>
+                <option value="none">Sin prioridad</option>
+            </select>
+        </div>
+
+        <div class="tasks-container">
+            <ul id="tasksList" class="tasks-list">
+                <!-- Las tareas se agregarán aquí dinámicamente -->
+            </ul>
+            <div id="emptyState" class="empty-state">
+                <p>No hay tareas. ¡Agrega una nueva tarea para comenzar!</p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <span id="taskCount">0 tareas</span>
+            <button id="clearCompletedBtn" class="btn btn-secondary">Limpiar completadas</button>
+            <button id="viewDeletedBtn" class="btn btn-secondary">Ver eliminadas</button>
+        </div>
+
+        <!-- Sección de tareas eliminadas -->
+        <div id="deletedTasksSection" class="deleted-tasks-section" style="display: none;">
+            <div class="deleted-header">
+                <h2>🗑️ Tareas Eliminadas</h2>
+                <button id="closeDeletedBtn" class="btn btn-secondary">Cerrar</button>
+            </div>
+            <div class="deleted-tasks-container">
+                <ul id="deletedTasksList" class="tasks-list">
+                    <!-- Las tareas eliminadas se agregarán aquí dinámicamente -->
+                </ul>
+                <div id="emptyDeletedState" class="empty-state">
+                    <p>No hay tareas eliminadas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

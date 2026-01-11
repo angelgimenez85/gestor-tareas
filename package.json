@@ -1,0 +1,20 @@
+{
+  "name": "gestor-tareas-electron",
+  "version": "1.0.0",
+  "description": "Aplicación de escritorio para gestionar tareas con prioridad opcional",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "keywords": [
+    "electron",
+    "tareas",
+    "todo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0"
+  }
+}
