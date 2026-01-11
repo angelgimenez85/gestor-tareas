@@ -8,9 +8,10 @@ Aplicación de escritorio desarrollada con Electron para gestionar tareas con pr
 - 🎯 Prioridad opcional (Alta, Media, Baja, Sin prioridad)
 - ✅ Marcar tareas como completadas
 - 🔍 Filtrado por prioridad
-- 💾 Persistencia de datos con localStorage
+- 💾 Persistencia de datos mediante archivo json en carpeta local de usuario
 - 🎨 Interfaz moderna y atractiva
 - 🧹 Limpiar tareas completadas
+- Ver tareas eliminadas
 
 ## Instalación
 
